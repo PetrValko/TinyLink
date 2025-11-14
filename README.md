@@ -9,17 +9,17 @@ If you just need a shortener that works and that other people can access, please
 You'll need Python installed to make this work. All the specific dependencies are listed in the requirements.txt file.
 
 Install the Code: First, clone the project from GitHub and open the directory:
-```bash
+```
 git clone https://github.com/PetrValko/TinyLink
 cd TinyLink
 ```
 Install the Requirements: Use pip to install everything needed to run the app:
-```bash
+```
 pip install -r requirements.txt
 ```
 
 How to run it: To run the main script, enter this command:
-```bash
+```
 python app.py
 ```
 You should see a message telling you that the code is running on http://127.0.0.1:5000 (by default)
