@@ -17,7 +17,6 @@ Install the Requirements: Use pip to install everything needed to run the app:
 ```
 pip install -r requirements.txt
 ```
-
 How to run it: To run the main script, enter this command:
 ```
 python app.py
