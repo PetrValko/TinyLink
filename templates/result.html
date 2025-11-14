@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Your link{% endblock %}
+{% block content %}
+<section class="panel">
+  <h1 class="panel-title">Your shortened URL</h1>
+
+  {% if errors and errors|length > 0 %}
+    <div class="alert">
+      Some entries could not be shortened:
+      <ul>
+        {% for e in errors %}
+          <li>{{ e.long_url }} — {{ e.error }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
+  {% if results and results|length > 0 %}
+    <ul id="results" class="result-list">
+      {% for item in results %}
+        <li class="result-item">
+          <div class="result-row">
+            <input class="input output" type="text" readonly value="{{ item.short_url }}">
+            <a class="btn btn-secondary open-one" href="{{ item.short_url }}" target="_blank" rel="noopener">Open</a>
+          </div>
+          <div class="muted">Destination: <a href="{{ item.long_url }}" target="_blank" rel="noopener">{{ item.long_url }}</a></div>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No URLs were shortened.</p>
+  {% endif %}
+
+  <div class="form-actions">
+    <a class="btn btn-link" href="/shorten/">Shorten more</a>
+  </div>
+</section>
+{% endblock %}

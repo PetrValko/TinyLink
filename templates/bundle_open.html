@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Bundle{% endblock %}
+{% block content %}
+<section class="panel">
+  <h1 class="panel-title">Bundle: opening all links in new tabs</h1>
+  <p class="muted">This page stays open as a reference; tabs will open about 2 seconds after load.</p>
+
+  <ul id="bundle-list" class="result-list">
+    {% for u in urls %}
+      <li class="result-item">
+        <div class="result-row">
+          <a class="btn btn-secondary open-one" href="{{ u }}" target="_blank" rel="noopener">Open</a>
+          <span class="muted" style="margin-left:10px">{{ u }}</span>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <div class="form-actions">
+    <a class="btn btn-link" href="/shorten/">Shorten more</a>
+  </div>
+</section>
+
+<script>
+  // After 2 seconds, try to open each destination in a new tab
+  // Note: popup blockers may limit this; as it occurs right after a user navigation, most browsers allow it.
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      const anchors = document.querySelectorAll('#bundle-list a.open-one');
+      anchors.forEach(a => { window.open(a.href, '_blank', 'noopener'); });
+    }, 2000);
+  });
+</script>
+{% endblock %}

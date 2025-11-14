@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}TinyLink{% endblock %}
+{% block content %}
+<section class="panel">
+  <h1 class="panel-title">Shorten a long URL (or multiple)</h1>
+
+  {% if error %}
+    <div class="alert">{{ error }}</div>
+  {% endif %}
+
+  <form class="form-grid" action="/shorten/" method="post" autocomplete="off">
+    <div class="form-row">
+      <label for="url" class="label">Long URL(s)</label>
+      <textarea id="url" name="url" rows="6" required
+                placeholder="https://example.com/one&#10;https://example.org/two"
+                class="input input-lg">{{ url_value or '' }}</textarea>
+      <small class="label">Tip: one URL per line; multiple lines will produce a single bundle link.</small>
+    </div>
+
+    <div class="form-row">
+      <label class="label">Domain</label>
+      <div class="domain-chip">127.0.0.1:5000/shorten/</div>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary btn-xl">Shorten</button>
+    </div>
+  </form>
+
+  <p class="legal">By clicking Shorten, you agree to the Terms and Privacy Policy.</p>
+</section>
+{% endblock %}

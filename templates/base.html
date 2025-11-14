@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}TinyURL-style{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <!-- ICO fallback requested by many browsers -->
+  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}?v=16" type="image/x-icon" sizes="16x16 32x32 48x48">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='icon-32.png') }}?v=16" sizes="32x32">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='icon-48.png') }}?v=16" sizes="48x48">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='icon-256.png') }}?v=16" sizes="256x256">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='icon-512.png') }}?v=16" sizes="512x512">
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='apple-touch-icon.png') }}?v=17" sizes="180x180">
+
+  <!-- IMPORTANT: remove SVG line unless you actually add static/icon.svg -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">TinyLink</div>
+      <nav class="nav">
+        <a href="/shorten/">Create</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="wrap">
+      {% block content %}{% endblock %}
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>Local demo at 127.0.0.1:5000/shorten</span>
+    </div>
+  </footer>
+</body>
+</html>

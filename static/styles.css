@@ -1,0 +1,44 @@
+:root{
+  --bg:#0b1220; --fg:#e5e7eb; --muted:#9ca3af;
+  --panel:#0e1627; --border:#1f2937;
+  --acc:#10b981; --acc-2:#059669;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+.wrap{max-width:880px;margin:0 auto;padding:0 16px}
+.site-header{border-bottom:1px solid var(--border);background:#0c1322}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 16px}
+.brand{font-weight:800;letter-spacing:.2px}
+.nav a{color:var(--fg);opacity:.9;margin-left:16px;text-decoration:none}
+.site-main .wrap{padding:40px 16px}
+.site-footer{border-top:1px solid var(--border);color:var(--muted)}
+.site-footer .wrap{padding:18px 16px}
+
+.panel{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:18px}
+.panel-title{margin:6px 0 14px;font-size:1.25rem;font-weight:700}
+
+.form-grid{display:flex;flex-direction:column;gap:16px}
+.form-row{display:flex;flex-direction:column;gap:8px}
+.label{font-weight:600;color:var(--muted)}
+.input{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--border);background:#0a1120;color:var(--fg)}
+.input-lg{padding:14px 16px}
+.output{background:#0a1120}
+
+.domain-chip{display:inline-block;padding:10px 12px;border-radius:10px;border:1px dashed var(--border);color:var(--muted);background:#0a1120}
+
+.result-list{list-style:none;padding-left:0;margin:0;display:flex;flex-direction:column;gap:12px}
+.result-item{}
+.result-row{display:flex;gap:10px;align-items:center}
+.muted{color:var(--muted)}
+
+.form-actions{margin-top:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:10px;border:1px solid transparent;padding:12px 16px;cursor:pointer;text-decoration:none}
+.btn-primary{background:var(--acc);color:#052d22;font-weight:800}
+.btn-primary:hover{background:var(--acc-2)}
+.btn-secondary{background:#2b3445;color:var(--fg)}
+.btn-link{color:var(--acc);background:transparent;border-color:transparent;padding-left:0}
+.btn-xl{padding:14px 18px;font-size:1.05rem}
+
+.alert{background:#2b0f12;border:1px solid #7f1d1d;color:#fecaca;padding:12px 14px;border-radius:10px}
+.legal{color:var(--muted);margin-top:8px}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Your bundle link{% endblock %}
+{% block content %}
+<section class="panel">
+  <h1 class="panel-title">Your bundle link is ready</h1>
+
+  {% if errors and errors|length > 0 %}
+    <div class="alert">
+      Some entries were invalid:
+      <ul>
+        {% for e in errors %}
+          <li>{{ e.long_url }} — {{ e.error }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
+  <div class="result-row" style="margin-bottom:12px">
+    <input class="input output" type="text" readonly value="{{ bundle_url }}">
+    <a class="btn btn-secondary" href="{{ bundle_url }}" target="_blank" rel="noopener">Open bundle</a>
+  </div>
+
+  <p class="muted">This single link opens a list page and, after 2 seconds, opens all destinations in new tabs.</p>
+
+  <h3 class="panel-title" style="margin-top:18px">Included URLs</h3>
+  <ul class="result-list">
+    {% for u in urls %}
+      <li class="result-item"><a href="{{ u }}" target="_blank" rel="noopener">{{ u }}</a></li>
+    {% endfor %}
+  </ul>
+
+  <div class="form-actions">
+    <a class="btn btn-link" href="/shorten/">Create another</a>
+  </div>
+</section>
+{% endblock %}
