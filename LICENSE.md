@@ -4,7 +4,7 @@ This document outlines the usage rights for the TinyLink repository. We use two 
 ## **Code License (MIT)**
 All files containing the core application logic, Python source code, and configuration files are licensed under the highly permissive MIT License. This means you are free to use, copy, modify, and redistribute the application's underlying functions.
 
-**MIT License** Copyright (c) 2025 Petr Valko
+**MIT License** © 2025 Petr Valko
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -28,7 +28,7 @@ SOFTWARE.
 
 The creative elements of the TinyLink website, including all custom user interface files, images, and design files, are reserved by the copyright **holder** (Petr Valko) to protect the brand identity of the official site.
 
-**Copyright (c) 2025 Petr Valko**
+**© 2025 Petr Valko**
 
 This license applies to files under these directories, which contain all UI, styling, and design elements:
 
