@@ -27,4 +27,4 @@ You should see a message telling you that the code is running on http://127.0.0.
 ## A Few Heads-Up
 
 * Updates: I'll try to keep this public repo updated, but don't expect every little change on the official site to show up here instantly. Sometimes I'm busy.
-* Issues and Contributions: If something's broken, feel free to open an issue. I have a day job and a life, so I can't promise an immediate fix, but I'll definitely look when I have a spare moment. No promises, but I appreciate the heads-up!
+* Issues and Contributions: If something's broken, feel free to open an issue. I have a life, so I can't promise an immediate fix, but I'll definitely look when I have a spare moment. No promises, but I appreciate the heads-up!
