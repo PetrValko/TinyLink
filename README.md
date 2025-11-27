@@ -18,8 +18,8 @@ Both versions provide the same core functionality, but the public site uses a di
 ## Installation
 Clone the repository:
 ```bash
-git clone https://github.com/pvsolutions-dev/TinyLink.git
-cd TinyLink
+git clone https://github.com/pvsolutions-dev/TinyLink-Public.git
+cd TinyLink-Public
 ```
 Install dependencies:
 ```bash
